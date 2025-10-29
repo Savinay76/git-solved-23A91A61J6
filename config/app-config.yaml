@@ -1,3 +1,4 @@
+# == Production Configuration (Primary) ==
 application:
   name: DevOpsSimulator
   version: 1.0.0
@@ -12,10 +13,21 @@ logging:
   level: INFO
   format: json
   
-# Development configuration (enabled via environment variable)
+# == Development Configuration (from 'main' branch) ==
+# This section was also in 'main' and is preserved.
 development:
   enabled: false
   port: 3000
   hot_reload: false
   debug_mode: false
   mock_apis: false
+
+# == Experimental Features (from 'conflict-simulator' branch) ==
+# Added as commented-out to maintain production stability
+# as per Phase 3 resolution strategy.
+#
+# experimental_features:
+#   enabled: false
+#   feature_flags:
+#     canary_releases: true
+#     chaos_engineering: false
